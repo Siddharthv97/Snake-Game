@@ -35,7 +35,7 @@ main {
 }
 
 .details {
-    padding: 12px;
+    padding: 12px 27px;
     display: flex;
     justify-content: space-between;
 
@@ -52,41 +52,20 @@ main {
     border-radius: 6px;
     padding: 4px;
     border: 1px solid #fff;
-    position: relative;
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
 }
 
-#snake_body {
-    list-style: none;
-    display: inline-block;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    #snake_head,
-    .snake_content {
-        width: 12px;
-        height: 12px;
-        background-color: #f5ebe0;
-        margin: 2px;
-    }
-
-    #snake_head {
-        border-radius: 4px;
-    }
-
-    #snake_tail {
-        width: 0;
-        margin: 2px;
-        height: 0;
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-top: 20px solid #fff;
-    }
-
+.snake_head {
+    background-color: #f5ebe0;
 }
 
-#menu{
+.food{
+    background-color: red;
+    
+}
+
+#menu {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -94,13 +73,9 @@ main {
     color: #000;
     padding: 12px;
     border-radius: 12px;
-    transform: translate(-50%,-50%);
-    /* display: none; */
+    transform: translate(-50%, -50%);
+    display: none;
 }
-
-
-
-
 
 img {
     mix-blend-mode: multiply;
@@ -109,7 +84,6 @@ img {
 }
 
 .img_1 {
-    width: 350px;
     left: 0;
     top: 0;
 }
@@ -121,7 +95,6 @@ img {
 }
 
 .img_3 {
-    width: 350px;
     right: 0;
     bottom: 0;
 
